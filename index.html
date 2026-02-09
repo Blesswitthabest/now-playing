@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="15">
+<style>
+body {
+  background:#E7E1D5;
+  font-family:sans-serif;
+  text-align:center;
+  color:#373D20;
+}
+.card {
+  padding:20px;
+}
+img {
+  width:200px;
+  border-radius:12px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>Now Playing</h2>
+<img src="cover.jpg">
+<h3 id="song">Loading...</h3>
+<p id="artist"></p>
+</div>
+<script>
+fetch('nowplaying.json')
+.then(r=>r.json())
+.then(data=>{
+document.getElementById('song').innerText=data.song;
+document.getElementById('artist').innerText=data.artist;
+document.querySelector('img').src=data.cover;
+});
+</script>
+</body>
+</html>
 
