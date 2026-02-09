@@ -1,6 +1,5 @@
 {
-  "song": "test",
-  "artist": "test",
-  "album": "test",
-  "artwork": ""
+"song" : "iTunes media",
+"artist" : "",
+"artwork" : "data:image/jpeg;base64, "
 }
